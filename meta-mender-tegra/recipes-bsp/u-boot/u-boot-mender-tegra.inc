@@ -2,6 +2,7 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/patches:"
 
 SRC_URI_append_mender-uboot = " file://0010-tegra-mender-auto-configured-modified.patch"
 SRC_URI_append_mender-uboot = " file://0011-Jetson-TX2-mender-boot-commands.patch"
+SRC_URI_append_mender-uboot = " file://0012-p3541-0000_defconfig-Mender-patch.patch"
 
 do_provide_mender_defines_append_tegra210() {
     if [ "${TEGRA_SPIFLASH_BOOT}" = "1" ]; then
