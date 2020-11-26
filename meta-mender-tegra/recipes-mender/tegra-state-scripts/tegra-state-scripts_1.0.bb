@@ -2,7 +2,6 @@ SRC_URI = " \
     file://redundant-boot-commit-check-script-uboot \
     file://redundant-boot-install-script \
     file://redundant-boot-install-script-uboot \
-    file://redundant-boot-rollback-script-uboot \
 "
 
 LICENSE = "Apache-2.0"
@@ -25,7 +24,6 @@ copy_install_script() {
 
 copy_install_script_mender-uboot() {
     cp ${S}/redundant-boot-install-script-uboot ${MENDER_STATE_SCRIPTS_DIR}/ArtifactInstall_Leave_80_bl-update
-    cp ${S}/redundant-boot-rollback-script-uboot ${MENDER_STATE_SCRIPTS_DIR}/ArtifactRollback_Leave_80_bl-rollback
     cp ${S}/redundant-boot-commit-check-script-uboot ${MENDER_STATE_SCRIPTS_DIR}/ArtifactCommit_Enter_80_bl-check-update
 }
 
