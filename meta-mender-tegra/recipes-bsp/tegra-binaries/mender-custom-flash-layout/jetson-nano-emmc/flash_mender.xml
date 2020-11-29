@@ -166,21 +166,22 @@
             <description> **Optional.** Reserved for future use by BPMP DTB binary; can't remove </description>
         </partition>
 
-        <!-- This is padding to ensure VER is at the end of flash -->
-        <partition name="PAD" id="19" type="data">
+        <partition name="UBENV" id="19" type="data">
             <allocation_policy> sequential </allocation_policy>
             <filesystem_type> basic </filesystem_type>
-            <size> 917504 </size>
+            <start_location> 0x7A0000 </start_location>
+            <size> 32768 </size>
             <file_system_attribute> 0 </file_system_attribute>
             <allocation_attribute> 8 </allocation_attribute>
             <percent_reserved> 0 </percent_reserved>
-            <description> **Required.** Empty padding. </description>
+            <description> **Required.** Reserved for U-Boot environment. </description>
         </partition>
 
         <partition name="VER_b" id="20" type="data">
             <allocation_policy> sequential </allocation_policy>
             <filesystem_type> basic </filesystem_type>
-            <size> 65536 </size>
+            <start_location> 0x7E0000 </start_location>
+            <size> 32768 </size>
             <file_system_attribute> 0 </file_system_attribute>
             <partition_attribute> 0 </partition_attribute>
             <allocation_attribute> 8 </allocation_attribute>
@@ -193,7 +194,8 @@
         <partition name="VER" id="21" type="data">
             <allocation_policy> sequential </allocation_policy>
             <filesystem_type> basic </filesystem_type>
-            <size> 65536 </size>
+            <start_location> 0x7F0000 </start_location>
+            <size> 32768 </size>
             <file_system_attribute> 0 </file_system_attribute>
             <partition_attribute> 0 </partition_attribute>
             <allocation_attribute> 8 </allocation_attribute>
