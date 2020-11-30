@@ -4,6 +4,7 @@ SRC_URI_append_mender-uboot = " file://0010-tegra-mender-auto-configured-modifie
 SRC_URI_append_mender-uboot = " file://0011-Jetson-TX2-mender-boot-commands.patch"
 SRC_URI_append_mender-uboot = " file://0013-Reduce-env-size-on-p3450-0000-to-64KiB.patch"
 SRC_URI_append_mender-uboot = " file://0014-mach-tegra-cboot.c-set-mender_boot_part-based-on-boo.patch"
+SRC_URI_append_mender-uboot = " file://0015-Update-TX1-nano-emmc-defconfigs-for-new-UBENV-locati.patch"
 
 do_provide_mender_defines_append_tegra210() {
     if [ "${TEGRA_SPIFLASH_BOOT}" = "1" ]; then
