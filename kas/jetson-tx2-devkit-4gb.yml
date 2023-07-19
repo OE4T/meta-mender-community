@@ -3,6 +3,6 @@ header:
   includes:
   - kas/include/mender-full.yml
   - kas/include/poky.yml
-  - kas/include/tegra.yml
+  - kas/include/tegra-jetpack4.yml
 
 machine: jetson-tx2-devkit-4gb

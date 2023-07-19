@@ -90,6 +90,8 @@ jobs:
             experimental: true
           - board: rock-pi-e
             experimental: true
+          - board: jetson-agx-orin-devkit
+            experimental: true
 
     runs-on: [self-hosted, linux, x64]
     container:
